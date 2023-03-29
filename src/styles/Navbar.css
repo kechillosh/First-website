@@ -1,0 +1,112 @@
+.navbar {
+  width: 100%;
+  height: 100px;
+  background-color: #121619;
+  display: flex;
+  flex-direction: row;
+}
+
+.navbar .rightSide {
+  flex: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 20px;
+}
+
+.navbar svg {
+  font-size: 40px;
+}
+
+a:hover {
+  color: red;
+}
+
+.rightSide {
+  margin-left: 50vw;
+}
+
+.navbar .leftSide img {
+  width: 10vh;
+}
+
+/* Style for the dropdown container */
+.dropdown {
+  position: relative;
+  margin-left: auto;
+}
+
+/* Style for the dropdown button */
+.dropdown button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Style for the dropdown menu */
+.dropdown ul {
+  position: absolute;
+  left: 0%;
+  top: 100%;
+  z-index: 1;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+/* Style for the dropdown menu items */
+.dropdown li {
+  display: block;
+  background-color: black;
+  padding: 10px;
+  width: 100%;
+}
+
+ul {
+  margin-right: 40px;
+  margin-top: 15px;
+  margin-bottom: 0px;
+  width: 90%;
+  padding: 0;
+  display: block;
+  justify-content: left;
+}
+.dropdown button {
+  padding: 0;
+  margin-right: 10vh;
+  display: flex;
+}
+
+.dropdown li a {
+  font-size: 2vh;
+}
+
+@media screen and (max-width: 860px) {
+  .navbar .rightSide {
+    display: none;
+  }
+  .navbar .mainDrop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: auto;
+    height: auto;
+    flex: 50%;
+  }
+  .navbar .mainDrop button {
+    margin-right: 100px;
+  }
+}
+
+@media screen and (min-width: 860px) {
+  .navbar .mainDrop {
+    display: none;
+  }
+}
