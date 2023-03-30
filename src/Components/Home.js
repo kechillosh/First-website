@@ -2,12 +2,8 @@ import React from "react";
 import backg from "../assets/backg.jpg";
 import backg1 from "../assets/backg1.png";
 import "../styles/Home.css";
-import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
 
 export const Home = () => {
-  const { isLoaded } = useLoadScript({
-    googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY,
-  });
   return (
     <div className="mainHome">
       <div
@@ -27,13 +23,6 @@ export const Home = () => {
           Book your car rental today and start your next adventure with ease!
         </p>
         <button>Book Now</button>
-      </div>
-      <div>
-        <GoogleMap
-          zoom={10}
-          center={{ lat: 44, lng: -80 }}
-          mapContainerClassName="map-container"
-        ></GoogleMap>
       </div>
     </div>
   );
