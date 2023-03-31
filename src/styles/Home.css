@@ -101,7 +101,7 @@ form {
   flex-direction: column;
   max-width: 500px;
   margin: 0 auto;
-  margin-top: 5vh;
+  margin-top: 30vh;
   margin-left: 20px;
 }
 
@@ -147,4 +147,5 @@ input[type="submit"]:hover {
   left: 40%;
   transform: translate(-50%, -50%);
   display: flex;
+  margin-top: 30vh;
 }
