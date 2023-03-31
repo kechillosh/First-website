@@ -22,9 +22,6 @@ function App() {
           </Route>
         </Routes>
       </Router>
-
-      <Form />
-      <Map />
     </div>
   );
 }
