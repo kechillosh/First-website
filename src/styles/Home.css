@@ -101,8 +101,8 @@ form {
   flex-direction: column;
   max-width: 500px;
   margin: 0 auto;
-  margin-left: 1vw;
   margin-top: 5vh;
+  margin-left: 20px;
 }
 
 label {
@@ -135,5 +135,16 @@ input[type="submit"]:hover {
 }
 
 .map-container {
-  margin-left: 100px;
+  height: 40vh;
+  margin: 20px;
+  width: 50vw;
+  position: absolute;
+}
+
+.mapa {
+  position: absolute;
+  top: 100%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  display: flex;
 }
