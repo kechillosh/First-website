@@ -7,16 +7,7 @@ import Contact from "./Components/Contact";
 import React, { useState } from "react";
 import { GoogleMap, LoadScript } from "@react-google-maps/api";
 import Map from "./Components/map";
-
-const containerStyle = {
-  width: "400px",
-  height: "400px",
-};
-
-const center = {
-  lat: -3.745,
-  lng: -38.523,
-};
+import Form from "./Components/Form";
 
 function App() {
   return (
@@ -31,9 +22,9 @@ function App() {
           </Route>
         </Routes>
       </Router>
-      <div>
-        <Map />
-      </div>
+
+      <Form />
+      <Map />
     </div>
   );
 }

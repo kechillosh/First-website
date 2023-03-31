@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import { GoogleMap, LoadScript } from "@react-google-maps/api";
 
 const containerStyle = {
-  width: "400px",
-  height: "400px",
+  position: "relative",
+  width: "100vw",
+  height: "40vh",
+  margin: "20px",
 };
 
 const center = {
@@ -30,6 +32,7 @@ function Map() {
         zoom={10}
         onLoad={onLoad}
         onUnmount={onUnmount}
+        mapContainerClassName="map-container"
       >
         {/* Child components, such as markers, info windows, etc. */}
         <></>
