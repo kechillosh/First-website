@@ -97,14 +97,20 @@
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
-@media screen and (max-width: 281px) {
+@media screen and (max-width: 280px) {
   .secondHome p {
     display: none;
   }
 }
-@media screen and (max-width: 281px) {
+@media screen and (max-width: 480px) {
   .secondHome button {
     top: 65%;
+  }
+}
+@media screen and (min-width: 280px) {
+  .secondHome p {
+    font-size: 18px;
+    width: 90%;
   }
 }
 
@@ -154,48 +160,62 @@
   .secondHome h1 {
     font-size: 25px;
     top: 30%;
+    width: 90%;
   }
   .secondHome button {
-    width: 100px;
+    width: 150px;
     height: 40px;
     font-size: 14px;
-    top: 70%;
+    top: 50%;
+  }
+}
+@media screen and (min-width: 280px) {
+  .secondHome h1 {
+    font-size: 24px;
+    top: 10%;
+    width: 90%;
+  }
+  .secondHome button {
+    width: 200px;
+    height: 40px;
+    font-size: 14px;
+    top: 75%;
   }
 }
 
 @media screen and (min-width: 480px) {
   .secondHome h1 {
-    font-size: 22px;
+    font-size: 32px;
   }
 }
 
 @media screen and (min-width: 768px) {
   .secondHome h1 {
-    font-size: 26px;
+    font-size: 34px;
   }
 }
 
 @media screen and (min-width: 992px) {
   .secondHome h1 {
-    font-size: 30px;
+    font-size: 36px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .secondHome h1 {
-    font-size: 34px;
+    font-size: 38px;
   }
 }
 
 @media screen and (min-width: 1400px) {
   .secondHome h1 {
-    font-size: 38px;
+    font-size: 40px;
   }
 }
 
 @media screen and (min-width: 1600px) {
   .secondHome h1 {
-    font-size: 40px;
+    font-size: 45px;
   }
 }
 
