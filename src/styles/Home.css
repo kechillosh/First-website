@@ -143,7 +143,7 @@ input[type="submit"]:hover {
 
 .mapa {
   position: absolute;
-  top: 100%;
+  top: 90%;
   left: 40%;
   transform: translate(-50%, -50%);
   display: flex;

@@ -8,6 +8,7 @@ import React, { useState } from "react";
 import { GoogleMap, LoadScript } from "@react-google-maps/api";
 import Map from "./Components/map";
 import Form from "./Components/Form";
+import Footer from "./Components/Footer";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           </Route>
         </Routes>
       </Router>
+      <Footer />
     </div>
   );
 }

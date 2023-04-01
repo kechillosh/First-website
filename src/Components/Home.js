@@ -28,9 +28,11 @@ export const Home = () => {
           <button>Book Now</button>
         </div>
       </div>
-      <Form />
-      <div className="mapa">
-        <Map />
+      <div>
+        <Form />
+        <div className="mapa">
+          <Map />
+        </div>
       </div>
     </div>
   );

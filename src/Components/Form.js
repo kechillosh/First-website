@@ -16,6 +16,8 @@ function Form() {
       <input type="date" id="dropoff-date" name="dropoff-date" required />
 
       <input type="submit" value="Submit" />
+
+      <label htmlFor="dropoff-date">Drop-off Date:</label>
     </form>
   );
 }
