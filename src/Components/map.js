@@ -18,18 +18,20 @@ function Map() {
   };
 
   return (
-    <LoadScript googleMapsApiKey="AIzaSyBWtJ4FHdXjEY683HopGtSxi-Y3wJezC24">
-      <GoogleMap
-        center={center}
-        zoom={10}
-        onLoad={onLoad}
-        onUnmount={onUnmount}
-        mapContainerClassName="map-container"
-      >
-        {/* Child components, such as markers, info windows, etc. */}
-        <></>
-      </GoogleMap>
-    </LoadScript>
+    <div className="mapDiv">
+      <LoadScript googleMapsApiKey="AIzaSyBWtJ4FHdXjEY683HopGtSxi-Y3wJezC24">
+        <GoogleMap
+          center={center}
+          zoom={10}
+          onLoad={onLoad}
+          onUnmount={onUnmount}
+          mapContainerClassName="map-container"
+        >
+          {/* Child components, such as markers, info windows, etc. */}
+          <></>
+        </GoogleMap>
+      </LoadScript>
+    </div>
   );
 }
 

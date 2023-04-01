@@ -20,20 +20,22 @@
 
   font-weight: 100;
   color: #ebc334;
-  font-size: 60px;
+  font-size: 50px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   text-align: center;
+  position: relative;
   position: absolute;
-  top: 15%;
   left: 50%;
+  top: 5%;
   transform: translate(-50%, -50%);
   z-index: 1;
 }
 
 .secondHome p {
   padding: 0;
-  font-size: 30px;
+  font-size: 35px;
   font-weight: lighter;
+  width: 60%;
 }
 
 .secondHome button {
@@ -49,7 +51,7 @@
   text-decoration: none;
   font-size: 20px;
   position: absolute;
-  top: 80%;
+  top: 75%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
@@ -66,7 +68,7 @@
   line-height: 1.5;
   margin-bottom: 30px;
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
@@ -95,57 +97,110 @@
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
-
-form {
-  display: flex;
-  flex-direction: column;
-  max-width: 500px;
-  margin: 0 auto;
-  margin-top: 30vh;
-  margin-left: 20px;
+@media screen and (max-width: 281px) {
+  .secondHome p {
+    display: none;
+  }
+}
+@media screen and (max-width: 281px) {
+  .secondHome button {
+    top: 65%;
+  }
 }
 
-label {
-  margin-bottom: 5px;
-  font-weight: bold;
+@media screen and (min-width: 480px) {
+  .secondHome p {
+    font-size: 18px;
+  }
 }
 
-input[type="text"],
-input[type="date"],
-input[type="time"] {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  margin-bottom: 10px;
-  font-size: 16px;
+@media screen and (min-width: 768px) {
+  .secondHome p {
+    font-size: 20px;
+  }
 }
 
-input[type="submit"] {
-  padding: 10px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  font-size: 18px;
-  cursor: pointer;
+@media screen and (min-width: 992px) {
+  .secondHome p {
+    font-size: 22px;
+  }
 }
 
-input[type="submit"]:hover {
-  background-color: #0062cc;
+@media screen and (min-width: 1200px) {
+  .secondHome p {
+    font-size: 24px;
+  }
 }
 
-.map-container {
-  height: 40vh;
-  margin: 20px;
-  width: 50vw;
-  position: absolute;
+@media screen and (min-width: 1400px) {
+  .secondHome p {
+    font-size: 26px;
+  }
 }
 
-.mapa {
-  position: absolute;
-  top: 90%;
-  left: 40%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  margin-top: 30vh;
+@media screen and (min-width: 1600px) {
+  .secondHome p {
+    font-size: 28px;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  .secondHome p {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  .secondHome h1 {
+    font-size: 25px;
+    top: 30%;
+  }
+  .secondHome button {
+    width: 100px;
+    height: 40px;
+    font-size: 14px;
+    top: 80%;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .secondHome h1 {
+    font-size: 22px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .secondHome h1 {
+    font-size: 26px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .secondHome h1 {
+    font-size: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .secondHome h1 {
+    font-size: 34px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .secondHome h1 {
+    font-size: 38px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .secondHome h1 {
+    font-size: 40px;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  .secondHome h1 {
+    font-size: 50px;
+  }
 }
