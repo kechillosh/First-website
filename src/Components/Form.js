@@ -1,6 +1,8 @@
 import React from "react";
 import "../styles/Home.css";
 import Map from "./map";
+import "../styles/Form.css";
+
 function Form() {
   return (
     <div>

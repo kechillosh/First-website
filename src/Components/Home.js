@@ -4,7 +4,7 @@ import backg1 from "../assets/backg1.png";
 import "../styles/Home.css";
 import Form from "./Form";
 import Map from "./map";
-
+import { Link, Router } from "react-router-dom";
 export const Home = () => {
   return (
     <div>
@@ -25,7 +25,9 @@ export const Home = () => {
             along the way. <br />
             Book your car rental today and start your next adventure with ease!
           </p>
-          <button>Book Now</button>
+          <Link to="/CheckoutForm">
+            <button>Book Now</button>
+          </Link>
         </div>
       </div>
     </div>
