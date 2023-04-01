@@ -1,70 +1,66 @@
 form {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  margin: 0 auto;
-  max-width: 600px;
-  padding: 20px;
-  border: 2px solid #ccc;
-  border-radius: 10px;
+  align-items: center;
+  gap: 20px;
   position: absolute;
   top: 10%;
-  left: 38%;
-  background-color: white;
-  width: 23vw;
-  height: 35vh;
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 label {
-  margin-top: 10px;
-  font-weight: bold;
-  font-size: 18px;
+  width: 200px;
+  font-size: 1.2rem;
+  text-align: right;
 }
 
 input[type="text"],
 input[type="date"],
-input[type="time"] {
-  margin-top: 5px;
+input[type="time"],
+input[type="submit"] {
+  width: 200px;
+  font-size: 1.2rem;
   padding: 10px;
+  border: none;
   border-radius: 5px;
-  border: 1px solid #ccc;
-  font-size: 16px;
-  width: 100%;
-  box-sizing: border-box;
+  background-color: #f2f2f2;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
 }
 
 input[type="submit"] {
-  margin-top: 20px;
-  background-color: #4caf50;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-size: 16px;
-  border: none;
+  background-color: #2ecc71;
+  color: #fff;
   cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 input[type="submit"]:hover {
-  background-color: #3e8e41;
+  background-color: #27ae60;
 }
 
-.mapa {
-  margin-top: 20px;
-}
-
-@media only screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   form {
-    max-width: 100%;
-    border-radius: 0;
-    border: none;
-    padding: 10px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px;
   }
+
+  label {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+
+  input[type="text"],
+  input[type="date"],
+  input[type="time"],
   input[type="submit"] {
-    margin-top: 10px;
-    padding: 8px 16px;
-    font-size: 14px;
+    width: 100%;
+    margin-bottom: 10px;
   }
 }
 
@@ -72,6 +68,7 @@ input[type="submit"]:hover {
   position: relative;
   width: 100%;
   height: 90vh;
+  margin-top: 130px;
   justify-content: center;
   align-items: left;
   flex-direction: column;
