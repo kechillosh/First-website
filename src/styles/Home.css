@@ -18,8 +18,8 @@
   justify-content: center;
   align-items: center;
 
-  font-weight: 100;
-  color: #ebc334;
+  font-weight: 50;
+  color: white;
   font-size: 50px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   text-align: center;
@@ -29,6 +29,7 @@
   top: 5%;
   transform: translate(-50%, -50%);
   z-index: 1;
+  letter-spacing: 1px;
 }
 
 .secondHome p {
@@ -46,7 +47,7 @@
   justify-content: center;
   background-color: #121619;
   height: 50px;
-  width: 180px;
+  width: 400px;
   color: white;
   text-decoration: none;
   font-size: 20px;
@@ -55,6 +56,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
+  letter-spacing: 1px;
 }
 
 .secondHome button:hover {
@@ -64,7 +66,7 @@
 }
 
 .secondHome p {
-  color: #ebc334;
+  color: white;
   line-height: 1.5;
   margin-bottom: 30px;
   position: absolute;
@@ -72,6 +74,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
+  letter-spacing: 1px;
 }
 
 .backgroundImg {
@@ -129,6 +132,10 @@
 @media screen and (min-width: 992px) {
   .secondHome p {
     font-size: 22px;
+  }
+  .secondHome p {
+    font-size: 18px;
+    width: 75%;
   }
 }
 
@@ -192,6 +199,12 @@
 @media screen and (min-width: 768px) {
   .secondHome h1 {
     font-size: 34px;
+  }
+  .secondHome button {
+    width: 250px;
+    height: 50px;
+    font-size: 20px;
+    top: 75%;
   }
 }
 
