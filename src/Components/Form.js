@@ -6,6 +6,7 @@ import "../styles/Form.css";
 function Form() {
   return (
     <div>
+      <Map />
       <form>
         <label htmlFor="pickup-location">Pick-up Location:</label>
         <input
@@ -25,9 +26,6 @@ function Form() {
         <input type="date" id="dropoff-date" name="dropoff-date" required />
 
         <input type="submit" value="Submit" />
-        <div className="mapa">
-          <Map />
-        </div>
       </form>
     </div>
   );
