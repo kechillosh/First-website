@@ -1,5 +1,11 @@
 import React, { useState, createContext } from "react";
-import { GoogleMap, LoadScript, MapContext } from "@react-google-maps/api";
+import {
+  GoogleMap,
+  LoadScript,
+  MapContext,
+  Marker,
+  Autocomplete,
+} from "@react-google-maps/api";
 
 const containerStyle = {
   width: "100%",
@@ -33,7 +39,9 @@ function Map() {
             center={center}
             zoom={10}
             onLoad={onLoad}
-          ></GoogleMap>
+          >
+            <Marker position={center} />
+          </GoogleMap>
         ) : (
           <div> is loading...</div>
         )}
