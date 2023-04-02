@@ -2,13 +2,16 @@ import React from "react";
 import "../styles/Home.css";
 import Map from "./map";
 import "../styles/Form.css";
+import { SiGooglemaps } from "react-icons/si";
 
 function Form() {
   return (
     <div>
       <Map />
       <form>
-        <label htmlFor="pickup-location">Pick-up Location:</label>
+        <label htmlFor="pickup-location">
+          Pick-up Location <SiGooglemaps />:
+        </label>
         <input
           type="text"
           id="pickup-location"
