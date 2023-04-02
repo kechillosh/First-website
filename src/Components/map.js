@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { GoogleMap, LoadScript } from "@react-google-maps/api";
+import React, { useState, createContext } from "react";
+import { GoogleMap, LoadScript, MapContext } from "@react-google-maps/api";
 
 const containerStyle = {
   width: "100%",
@@ -12,29 +12,31 @@ const center = {
 };
 
 function Map() {
-  const [map, setMap] = useState(null);
+  const MapContext = createContext();
+  const [isMapLoaded, setIsMapLoaded] = useState(true);
 
   const onLoad = (map) => {
-    setMap(map);
+    setIsMapLoaded(true);
+    // ...
   };
 
-  const onUnmount = () => {
-    setMap(null);
+  const handleUnload = () => {
+    setIsMapLoaded(false);
   };
 
   return (
     <div className="map-container">
       <LoadScript googleMapsApiKey="AIzaSyBWtJ4FHdXjEY683HopGtSxi-Y3wJezC24">
-        <GoogleMap
-          mapContainerStyle={containerStyle}
-          center={center}
-          zoom={10}
-          onLoad={onLoad}
-          onUnmount={onUnmount}
-        >
-          {/* Child components, such as markers, info windows, etc. */}
-          <></>
-        </GoogleMap>
+        {isMapLoaded ? (
+          <GoogleMap
+            mapContainerStyle={containerStyle}
+            center={center}
+            zoom={10}
+            onLoad={onLoad}
+          ></GoogleMap>
+        ) : (
+          <div> is loading...</div>
+        )}
       </LoadScript>
     </div>
   );
