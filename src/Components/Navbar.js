@@ -8,7 +8,7 @@ import { SiGooglemessages } from "react-icons/si";
 import { TfiAlignJustify } from "react-icons/tfi";
 import DropdownMenu from "./DropdownMenu";
 import { GoogleMap, LoadScript, MapContext } from "@react-google-maps/api";
-import Map from "./map";
+import Map from "./Map";
 
 function Navbar() {
   const handleButtonClick1 = () => {
