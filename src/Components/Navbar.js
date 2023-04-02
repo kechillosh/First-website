@@ -11,9 +11,19 @@ import { GoogleMap, LoadScript, MapContext } from "@react-google-maps/api";
 import Map from "./map";
 
 function Navbar() {
-  const handleButtonClick = () => {
+  const handleButtonClick1 = () => {
     // Navigate to the desired link
     window.location.href = "/";
+
+    // Reload the page after the navigation is complete
+    window.addEventListener("load", () => {
+      window.location.reload();
+    });
+  };
+
+  const handleButtonClick2 = () => {
+    // Navigate to the desired link
+    window.location.href = "/Contact";
 
     // Reload the page after the navigation is complete
     window.addEventListener("load", () => {
@@ -29,13 +39,13 @@ function Navbar() {
         </Link>
       </div>
       <div className="rightSide">
-        <Link className="navLink" to="/" onClick={handleButtonClick}>
+        <Link className="navLink" to="/" onClick={handleButtonClick1}>
           <SiGooglehome /> Home
         </Link>
         <Link className="navLink" to="/Locations">
           <SiGooglemaps /> Locations
         </Link>
-        <Link className="navLink" to="/Contact" onClick={handleButtonClick}>
+        <Link className="navLink" to="/Contact" onClick={handleButtonClick2}>
           <SiGooglemessages /> Contact
         </Link>
       </div>
