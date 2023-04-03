@@ -40,13 +40,14 @@ function Map() {
         <label htmlFor="pickup-location">
           Pick-up Location <SiGooglemaps />:
         </label>
-
-        <input
-          type="text"
-          id="pickup-location"
-          name="pickup-location"
-          required
-        />
+        <Autocomplete>
+          <input
+            type="text"
+            id="pickup-location"
+            name="pickup-location"
+            required
+          />
+        </Autocomplete>
 
         <label htmlFor="pickup-date">Pick-up Date:</label>
         <input type="date" id="pickup-date" name="pickup-date" required />
