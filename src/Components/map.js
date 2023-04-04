@@ -53,7 +53,7 @@ function Map() {
         >
           <Marker position={center} />
         </GoogleMap>
-        <form>
+        <form onSubmit={handlePlaceChanged}>
           <label htmlFor="pickup-location">
             Pick-up Location <SiGooglemaps />:
           </label>
