@@ -6,9 +6,8 @@ import Locations from "./Components/Locations";
 import Contact from "./Components/Contact";
 import React, { useState } from "react";
 import { GoogleMap, LoadScript } from "@react-google-maps/api";
-import Map from "./Components/Map";
 import Footer from "./Components/Footer";
-
+import Map from "./Components/Map";
 function App() {
   return (
     <div className="App">

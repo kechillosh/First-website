@@ -5,7 +5,7 @@ import {
   Marker,
   Autocomplete,
 } from "@react-google-maps/api";
-import { useState, createContext } from "react";
+import { useState, createContext, useRef } from "react";
 import React from "react";
 import "../styles/Home.css";
 
@@ -19,17 +19,24 @@ const containerStyle = {
 
 function Map() {
   const [center, setCenter] = useState({ lat: -3.745, lng: -38.523 });
-  const mapRef = React.useRef(null);
+  const mapRef = useRef(null);
+  const autocompleteRef = useRef(null);
 
   const [isMapLoaded, setIsMapLoaded] = useState(true);
 
   const onLoad = (map) => {
     setIsMapLoaded(true);
-    // ...
+    mapRef.current = map;
   };
 
   const handleUnload = () => {
     setIsMapLoaded(false);
+  };
+
+  const handlePlaceChanged = () => {
+    const place = autocompleteRef.current.getPlace();
+    const { lat, lng } = place.geometry.location;
+    setCenter({ lat: lat(), lng: lng() });
   };
 
   return (
@@ -50,7 +57,12 @@ function Map() {
           <label htmlFor="pickup-location">
             Pick-up Location <SiGooglemaps />:
           </label>
-          <Autocomplete>
+          <Autocomplete
+            onLoad={(autocomplete) => {
+              autocompleteRef.current = autocomplete;
+            }}
+            onPlaceChanged={handlePlaceChanged}
+          >
             <input
               type="text"
               id="pickup-location"
