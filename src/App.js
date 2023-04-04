@@ -9,7 +9,11 @@ import { GoogleMap, LoadScript } from "@react-google-maps/api";
 import Footer from "./Components/Footer";
 import Map from "./Components/Map";
 import NoCheckout from "./Components/NoCheckout";
+
 function App() {
+  // Set a boolean flag to determine whether to show the footer or not
+  const [showFooter, setShowFooter] = useState(true);
+
   return (
     <div className="App">
       <Router>
@@ -20,11 +24,14 @@ function App() {
             <Route path="/Locations" element={<Locations />} />
             <Route path="/Contact" element={<Contact />} />
             <Route path="/CheckoutForm" element={<Map />} />
-            <Route path="/NoCheckout" element={<NoCheckout />} />
+            <Route
+              path="/NoCheckout"
+              element={<NoCheckout setShowFooter={setShowFooter} />}
+            />
           </Route>
         </Routes>
       </Router>
-      <Footer />
+      {showFooter && <Footer />}
     </div>
   );
 }

@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../styles/NoCheckout.css";
 
-function NoCheckout() {
+function NoCheckout({ setShowFooter }) {
+  useEffect(() => {
+    setShowFooter(false);
+
+    return () => {
+      setShowFooter(true);
+    };
+  }, []);
+
   return (
     <div className="no-cars-container">
       <div className="no-cars-text">
