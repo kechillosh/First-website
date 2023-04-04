@@ -38,6 +38,10 @@ function Map() {
     const { lat, lng } = place.geometry.location;
     setCenter({ lat: lat(), lng: lng() });
   };
+  const handleButtonClick2 = () => {
+    // Navigate to the desired link
+    window.location.href = "/NoCheckout";
+  };
 
   return (
     <div className="map-container">
@@ -80,7 +84,11 @@ function Map() {
           <label htmlFor="dropoff-date">Drop-off Date:</label>
           <input type="date" id="dropoff-date" name="dropoff-date" required />
 
-          <input type="submit" value="Calculate Route" />
+          <input
+            type="submit"
+            value="Calculate Route"
+            onClick={handleButtonClick2}
+          />
         </form>
       </LoadScript>
     </div>

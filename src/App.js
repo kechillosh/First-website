@@ -8,6 +8,7 @@ import React, { useState } from "react";
 import { GoogleMap, LoadScript } from "@react-google-maps/api";
 import Footer from "./Components/Footer";
 import Map from "./Components/Map";
+import NoCheckout from "./Components/NoCheckout";
 function App() {
   return (
     <div className="App">
@@ -19,6 +20,7 @@ function App() {
             <Route path="/Locations" element={<Locations />} />
             <Route path="/Contact" element={<Contact />} />
             <Route path="/CheckoutForm" element={<Map />} />
+            <Route path="/NoCheckout" element={<NoCheckout />} />
           </Route>
         </Routes>
       </Router>
