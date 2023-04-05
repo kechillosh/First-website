@@ -38,7 +38,8 @@ function Map() {
     const { lat, lng } = place.geometry.location;
     setCenter({ lat: lat(), lng: lng() });
   };
-  const handleButtonClick2 = () => {
+  const handleButtonClick2 = (event) => {
+    event.preventDefault();
     // Navigate to the desired link
     window.location.href = "/NoCheckout";
   };
