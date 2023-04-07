@@ -42,7 +42,7 @@ input[type="submit"]:hover {
 }
 
 @media screen and (max-width: 768px) {
-  form {
+  .mapForm {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;

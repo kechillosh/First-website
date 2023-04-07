@@ -3,12 +3,12 @@
   width: 100%;
   height: 90vh;
   justify-content: center;
-  align-items: left;
   flex-direction: column;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  align-items: left;
 }
 #contact-form {
   background-color: white;
@@ -28,6 +28,7 @@ label {
   font-weight: bold;
   margin-bottom: 10px;
   display: block;
+  text-align: left;
 }
 
 input,
@@ -52,4 +53,40 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
   background-color: #0062cc;
+}
+
+@media screen and (min-width: 200px) {
+  #contact-form {
+    max-width: 160px;
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media screen and (min-width: 560px) {
+  #contact-form {
+    max-width: 400px;
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media screen and (min-width: 860px) {
+  #contact-form {
+    max-width: 500px;
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  #contact-form {
+    max-width: 700px;
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
