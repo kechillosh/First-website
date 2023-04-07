@@ -41,29 +41,6 @@ input[type="submit"]:hover {
   background-color: #27ae60;
 }
 
-@media screen and (max-width: 768px) {
-  .mapForm {
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 20px;
-  }
-
-  label {
-    width: 100%;
-    text-align: left;
-    margin-bottom: 10px;
-  }
-
-  input[type="text"],
-  input[type="date"],
-  input[type="time"],
-  input[type="submit"] {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-}
-
 .map-container {
   position: relative;
   width: 100%;
@@ -80,4 +57,35 @@ input[type="submit"]:hover {
 
 form svg {
   color: green;
+}
+
+.hide {
+  width: 10%;
+  height: 15%;
+  top: 9%;
+  position: absolute;
+  z-index: 2;
+  align-items: start;
+
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border: none;
+  font-size: 15px;
+
+  border-radius: 5px;
+
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.hide svg {
+  z-index: 2;
+  color: black;
+  font-size: 20px;
+}
+
+@media screen and (min-width: 461px) {
+  .hide {
+    display: none;
+  }
 }

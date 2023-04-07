@@ -12,6 +12,8 @@ import "../styles/Home.css";
 import "../styles/Form.css";
 import { SiGooglemaps } from "react-icons/si";
 import { useLocation } from "react-router-dom";
+import { SlArrowRight } from "react-icons/sl";
+import { SlArrowLeft } from "react-icons/sl";
 
 const containerStyle = {
   width: "100%",
@@ -24,6 +26,12 @@ function Map() {
   const autocompleteRef = useRef(null);
 
   const [isMapLoaded, setIsMapLoaded] = useState(true);
+
+  const [showForm, setShowForm] = useState(true);
+
+  const toggleForm = () => {
+    setShowForm((prev) => !prev);
+  };
 
   const onLoad = (map) => {
     setIsMapLoaded(true);
@@ -59,39 +67,44 @@ function Map() {
         >
           <Marker position={center} />
         </GoogleMap>
-        <form className="mapForm" onSubmit={handlePlaceChanged}>
-          <label htmlFor="pickup-location">
-            Pick-up Location <SiGooglemaps />:
-          </label>
-          <Autocomplete
-            onLoad={(autocomplete) => {
-              autocompleteRef.current = autocomplete;
-            }}
-            onPlaceChanged={handlePlaceChanged}
-          >
+        <button onClick={toggleForm} className="hide">
+          {showForm ? <SlArrowLeft /> : <SlArrowRight />}
+        </button>
+        {showForm && (
+          <form className="mapForm" onSubmit={handlePlaceChanged}>
+            <label htmlFor="pickup-location">
+              Pick-up Location <SiGooglemaps />:
+            </label>
+            <Autocomplete
+              onLoad={(autocomplete) => {
+                autocompleteRef.current = autocomplete;
+              }}
+              onPlaceChanged={handlePlaceChanged}
+            >
+              <input
+                type="text"
+                id="pickup-location"
+                name="pickup-location"
+                required
+              />
+            </Autocomplete>
+
+            <label htmlFor="pickup-date">Pick-up Date:</label>
+            <input type="date" id="pickup-date" name="pickup-date" required />
+
+            <label htmlFor="pickup-time">Pick-up Time:</label>
+            <input type="time" id="pickup-time" name="pickup-time" required />
+
+            <label htmlFor="dropoff-date">Drop-off Date:</label>
+            <input type="date" id="dropoff-date" name="dropoff-date" required />
+
             <input
-              type="text"
-              id="pickup-location"
-              name="pickup-location"
-              required
+              type="submit"
+              value="Calculate Route"
+              onClick={handleButtonClick2}
             />
-          </Autocomplete>
-
-          <label htmlFor="pickup-date">Pick-up Date:</label>
-          <input type="date" id="pickup-date" name="pickup-date" required />
-
-          <label htmlFor="pickup-time">Pick-up Time:</label>
-          <input type="time" id="pickup-time" name="pickup-time" required />
-
-          <label htmlFor="dropoff-date">Drop-off Date:</label>
-          <input type="date" id="dropoff-date" name="dropoff-date" required />
-
-          <input
-            type="submit"
-            value="Calculate Route"
-            onClick={handleButtonClick2}
-          />
-        </form>
+          </form>
+        )}
       </LoadScript>
     </div>
   );
