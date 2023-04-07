@@ -5,12 +5,13 @@ import {
   Marker,
   Autocomplete,
 } from "@react-google-maps/api";
-import { useState, createContext, useRef } from "react";
+import { useState, createContext, useRef, useEffect } from "react";
 import React from "react";
 import "../styles/Home.css";
 
 import "../styles/Form.css";
 import { SiGooglemaps } from "react-icons/si";
+import { useLocation } from "react-router-dom";
 
 const containerStyle = {
   width: "100%",
@@ -18,7 +19,7 @@ const containerStyle = {
 };
 
 function Map() {
-  const [center, setCenter] = useState({ lat: -3.745, lng: -38.523 });
+  const [center, setCenter] = useState({ lat: 45.94, lng: 25.0 });
   const mapRef = useRef(null);
   const autocompleteRef = useRef(null);
 
@@ -53,7 +54,7 @@ function Map() {
         <GoogleMap
           mapContainerStyle={containerStyle}
           center={center}
-          zoom={10}
+          zoom={8}
           onLoad={onLoad}
         >
           <Marker position={center} />

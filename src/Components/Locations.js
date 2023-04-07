@@ -8,7 +8,7 @@ import Ploiesti from "../assets/Ploiesti-Halele-10.jpg";
 import Arad from "../assets/primaria-veche-arad.jpg";
 import Sibiu from "../assets/Sibiu_15257629580.jpg";
 import TgMures from "../assets/Targu-Mures-1.jpg";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 export const Locations = () => {
   return (
