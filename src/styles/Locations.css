@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
 .MainLoc {
   display: flex;
   flex-wrap: wrap;
@@ -7,16 +9,18 @@
 }
 
 .MainLoc h1 {
+  font-family: "Montserrat", sans-serif;
   font-size: 36px;
   font-weight: bold;
   text-align: center;
   margin-bottom: 20px;
 }
 
-.MainLoc div {
+.MainLoc .Box {
   width: 300px;
   margin: 20px;
   text-align: center;
+  transition: 1s;
 }
 
 .MainLoc img {
@@ -35,4 +39,16 @@
 
 .MainLoc div:first-child h1 {
   font-size: 48px;
+}
+.MainLoc p {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.MainLoc .Box :hover {
+  z-index: 2;
+  transform: scale(1.2);
+  transition: 1s;
 }
