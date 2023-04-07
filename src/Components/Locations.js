@@ -8,6 +8,7 @@ import Ploiesti from "../assets/Ploiesti-Halele-10.jpg";
 import Arad from "../assets/primaria-veche-arad.jpg";
 import Sibiu from "../assets/Sibiu_15257629580.jpg";
 import TgMures from "../assets/Targu-Mures-1.jpg";
+import { Link } from "react-router-dom";
 
 export const Locations = () => {
   return (
@@ -17,39 +18,57 @@ export const Locations = () => {
       </div>
       <div className="Box">
         <p>Timisoara</p>
-        <img src={Tm} alt="Timisoara" />
+        <Link to="/CheckoutForm">
+          <img src={Tm} alt="Timisoara" />
+        </Link>
       </div>
       <div className="Box">
         <p>Cluj</p>
-        <img src={Cluj} />
+        <Link to="/CheckoutForm">
+          <img src={Cluj} />
+        </Link>
       </div>
       <div className="Box">
         <p>Brasov</p>
-        <img src={Brasov} alt="Timisoara" />
+        <Link to="/CheckoutForm">
+          <img src={Brasov} alt="Timisoara" />
+        </Link>
       </div>
       <div className="Box">
         <p>Iasi</p>
-        <img src={Iasi} alt="Timisoara" />
+        <Link to="/CheckoutForm">
+          <img src={Iasi} alt="Timisoara" />
+        </Link>
       </div>
       <div className="Box">
         <p> Constanta</p>
-        <img src={Constanta} alt="Timisoara" />
+        <Link to="/CheckoutForm">
+          <img src={Constanta} alt="Timisoara" />
+        </Link>
       </div>
       <div className="Box">
         <p> Arad</p>
-        <img src={Arad} alt="Timisoara" />
+        <Link to="/CheckoutForm">
+          <img src={Arad} alt="Timisoara" />
+        </Link>
       </div>
       <div className="Box">
         <p> Ploiesti</p>
-        <img src={Ploiesti} alt="Timisoara" />
+        <Link to="/CheckoutForm">
+          <img src={Ploiesti} alt="Timisoara" />
+        </Link>
       </div>
       <div className="Box">
         <p>Sibiu</p>
-        <img src={Sibiu} alt="Timisoara" />
+        <Link to="/CheckoutForm">
+          <img src={Sibiu} alt="Timisoara" />
+        </Link>
       </div>
       <div className="Box">
         <p>Târgu Mureș</p>
-        <img src={TgMures} alt="Timisoara" />
+        <Link to="/CheckoutForm">
+          <img src={TgMures} alt="Timisoara" />
+        </Link>
       </div>
     </div>
   );
