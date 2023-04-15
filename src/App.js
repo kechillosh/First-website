@@ -7,7 +7,7 @@ import Contact from "./Components/Contact";
 import React, { useState } from "react";
 import { GoogleMap, LoadScript } from "@react-google-maps/api";
 import Footer from "./Components/Footer";
-import Map from "./Components/Map";
+import Map from "./Components/Map.js";
 import NoCheckout from "./Components/NoCheckout";
 
 function App() {
